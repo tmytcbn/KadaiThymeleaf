@@ -5,8 +5,8 @@
 </head>
 <body>
     <h1 th:text="#{content.title}"></h1>
-    <h2>出力画面</h2>
-    <p th:text="'入力された値は「' + ${val} + '」です。'"></p>
-    <p><a th:href="@{/input(previous=${val})}">入力画面へ戻る</a></p>
+    <h2 th:text="#{content.output}"></h2>
+    <p th:text="#{content.output_txt1_1} + ${val} + #{content.output_txt1_2}"></p>
+    <p><a th:href="@{/input(previous=${val})}" th:text="#{content.output_txt2}"></a></p>
 </body>
 </html>
